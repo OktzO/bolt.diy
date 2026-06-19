@@ -100,4 +100,4 @@ ENV VITE_LOG_LEVEL=${VITE_LOG_LEVEL} \
 # Example: docker run -e OPENAI_API_KEY=your_key_here ...
 
 RUN mkdir -p /app/run
-CMD ["npx", "wrangler", "pages", "dev", "./build/client", "--port", "5173"]
+CMD ["node", "./build/server/index.js"]
