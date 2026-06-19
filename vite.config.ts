@@ -75,7 +75,7 @@ export default defineConfig((config) => {
     server: {
       port: 5173,
       host: true,
-      allowedHosts: ['.hf.space', 'oktz-bolt.hf.space', 'localhost', '127.0.0.1'],
+      allowedHosts: 'all',
     },
     test: {
       exclude: [
