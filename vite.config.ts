@@ -72,11 +72,7 @@ export default defineConfig((config) => {
         },
       },
     },
-    server: {
-      port: 5173,
-      host: true,
-      allowedHosts: 'all',
-    },
+    
     test: {
       exclude: [
         '**/node_modules/**',
