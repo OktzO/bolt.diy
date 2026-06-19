@@ -72,12 +72,17 @@ export default defineConfig((config) => {
         },
       },
     },
+    server: {
+      port: 5173,
+      host: true,
+      allowedHosts: ['.hf.space', 'oktz-bolt.hf.space', 'localhost', '127.0.0.1'],
+    },
     test: {
       exclude: [
         '**/node_modules/**',
         '**/dist/**',
         '**/cypress/**',
-        '**/.{idea,git,cache,output,temp}/**',
+        '**/*.{idea,git,cache,output,temp}/**',
         '**/{karma,rollup,webpack,vite,vitest,jest,ava,babel,nyc,cypress,tsup,build}.config.*',
         '**/tests/preview/**', // Exclude preview tests that require Playwright
       ],
