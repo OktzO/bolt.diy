@@ -11,13 +11,6 @@ dotenv.config({ path: '.env.local' });
 dotenv.config({ path: '.env' });
 dotenv.config();
 
-server: {
-    allowedHosts: 'all',
-    host: true,
-    port: 5173,
-  }
-})
-
 export default defineConfig((config) => {
   return {
     define: {
