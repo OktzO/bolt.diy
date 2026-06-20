@@ -17,6 +17,15 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Lowercase image name
+        run: echo "IMAGE=ghcr.io/$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')/bolt:latest" >> $GITHUB_ENV
+
+      - name: Build & Push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ${{ env.IMAGE }}
+
       - name: Build & Push
         uses: docker/build-push-action@v5
         with:
