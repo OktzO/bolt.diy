@@ -77,7 +77,7 @@ export default defineConfig((config) => {
   allowedHosts: 'all',  // tambah ini
   port: 5173,
   host: true,
-    }
+    },
     
     test: {
       exclude: [
