@@ -74,7 +74,7 @@ export default defineConfig((config) => {
     },
 
     server: {
-  allowedHosts: 'all',  // tambah ini
+  allowedHosts: 'true',  // tambah ini
   port: 5173,
   host: true,
     },
