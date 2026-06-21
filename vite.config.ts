@@ -74,10 +74,11 @@ export default defineConfig((config) => {
     },
 
     server: {
-  allowedHosts: 'true',  // tambah ini
+  allowedHosts: true, // <-- Tanpa tanda kutip sama sekali
   port: 5173,
   host: true,
-    },
+},
+
     
     test: {
       exclude: [
