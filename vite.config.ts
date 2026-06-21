@@ -74,11 +74,14 @@ export default defineConfig((config) => {
     },
 
     server: {
-  allowedHosts: true, // <-- Tanpa tanda kutip sama sekali
+  allowedHosts: true, 
   port: 5173,
   host: true,
+  // Tambahkan baris di bawah ini
+  hmr: {
+    clientPort: 443
+  }
 },
-
     
     test: {
       exclude: [
