@@ -73,13 +73,17 @@ export default defineConfig((config) => {
       },
     },
 
-    server: {
-  allowedHosts: true, 
+server: {
+  allowedHosts: true,
   port: 5173,
   host: true,
-  // Tambahkan baris di bawah ini
   hmr: {
     clientPort: 443
+  },
+  // Tambahkan blok ini untuk mengaktifkan WebContainers
+  headers: {
+    "Cross-Origin-Embedder-Policy": "require-corp",
+    "Cross-Origin-Opener-Policy": "same-origin",
   }
 },
     
